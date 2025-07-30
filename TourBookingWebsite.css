@@ -1,0 +1,49 @@
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.portfolio-box {
+  position: relative;
+  background: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.portfolio-box img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-layer h4 {
+  color: #00adb5;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-layer p {
+  color: #ccc;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #00adb5;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition:  0.3s ease;
+}
+
+.btn:hover {
+  background: #007b83;
+}
