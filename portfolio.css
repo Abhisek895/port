@@ -14,15 +14,19 @@
 ::-webkit-scrollbar {
     width: 1rem;
 }
+
 ::-webkit-scrollbar-track {
     background: var(--bg-color);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--main-color);
     border-radius: 1rem;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #409ad9; /* slightly darker blue on hover */
+    background: #409ad9;
+    /* slightly darker blue on hover */
 }
 
 :root {
@@ -48,10 +52,16 @@ section {
 }
 
 /* Explicit Alternating Background Colors */
-.home, .experience, .service, .Contact {
+.home,
+.experience,
+.service,
+.Contact {
     background: var(--bg-color);
 }
-.about, .education, .portfolio {
+
+.about,
+.education,
+.portfolio {
     background: var(--snd-bg-color);
 }
 
@@ -197,12 +207,15 @@ span {
     0% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-2.4rem);
     }
+
     60% {
         transform: translateY(-3.4rem);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -240,7 +253,7 @@ span {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-    
+
 }
 
 /* Services Section */
@@ -260,6 +273,7 @@ span {
 .project-details-container {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
+
 .project-details-container .services-box {
     padding: 2.5rem 3rem;
 }
@@ -330,6 +344,7 @@ span {
 
 .portfolio h2 {
     margin-bottom: 4rem;
+    margin-top: 10rem;
 }
 
 .portfolio-container {
@@ -378,6 +393,7 @@ span {
 .portfolio-layer::-webkit-scrollbar {
     display: none;
 }
+
 .portfolio-layer {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -425,6 +441,7 @@ span {
     border-radius: .5rem;
     font-size: 1.6rem;
 }
+
 .portfolio-layer a i {
     font-size: 2rem;
     color: var(--snd-bg-color);
@@ -440,6 +457,7 @@ span {
     margin: 1rem auto 3rem;
     text-align: center;
 }
+
 /* Cleaned up stray hover override */
 .Contact form .input-box {
     display: flex;
@@ -513,7 +531,9 @@ body {
 }
 
 /* ✅ Ensure no image exceeds screen width */
-img, video, canvas {
+img,
+video,
+canvas {
     max-width: 100%;
     height: auto;
     display: block;
@@ -533,7 +553,8 @@ img, video, canvas {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 1rem; /* prevent edge overflow */
+    padding: 0 1rem;
+    /* prevent edge overflow */
     box-sizing: border-box;
 }
 
@@ -548,7 +569,8 @@ img, video, canvas {
 }
 
 /* 🔒 Strict overflow guard */
-html, body {
+html,
+body {
     max-width: 100vw;
     overflow-x: hidden;
 }
@@ -590,13 +612,15 @@ section,
 
 /* 📷 Make the image bigger and cleaner */
 .about-img img {
-    width: 440px; /* Increased from 400px */
+    width: 440px;
+    /* Increased from 400px */
     height: auto;
     border-radius: 12px;
     border: 6px solid var(--main-color);
     object-fit: cover;
     box-shadow: 0 0 20px rgba(89, 178, 244, 0.6);
-    margin-left: 3rem; /* Nudge a bit to the right */
+    margin-left: 3rem;
+    /* Nudge a bit to the right */
 }
 
 /* 🧑‍💻 About Content Section */
@@ -646,7 +670,7 @@ section,
     background: var(--text-color);
     color: var(--snd-bg-color);
 }
- 
+
 
 /* 📱 Responsive Breakpoints */
 @media (max-width: 1200px) {
@@ -709,7 +733,7 @@ section,
     .home-content h1 {
         font-size: 4.5rem;
     }
-    
+
     .home-content h3 {
         font-size: 2.5rem;
     }
@@ -743,4 +767,4 @@ section,
     .home-content h3 {
         font-size: 2rem;
     }
-}  
+}
