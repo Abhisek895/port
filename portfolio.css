@@ -248,23 +248,23 @@ span {
 }
 
 .services-container .services-box {
-    background: var(--snd-bg-color);
+    background: linear-gradient(145deg, var(--snd-bg-color), #212536);
     padding: 4rem 3rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid transparent;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.2);
-    transition: all .4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
 }
 
 .services-container .services-box:hover {
-    border-color: var(--main-color);
-    transform: translateY(-1rem);
-    box-shadow: 0 1rem 3rem rgba(89, 178, 244, 0.2);
+    border-color: rgba(89, 178, 244, 0.5);
+    transform: translateY(-1.5rem);
+    box-shadow: 0 1.5rem 4rem rgba(89, 178, 244, 0.25);
 }
 
 .services-box i {
@@ -289,14 +289,16 @@ span {
 
 .services-box h3 {
     font-size: 2.4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .services-box p {
     font-size: 1.6rem;
-    margin: 1rem 0 2.5rem;
-    line-height: 1.6;
+    margin: 1.5rem 0 3rem;
+    line-height: 1.7;
+    text-align: center;
+    color: #cbd5e1;
 }
 
 .services-box .btn {
@@ -490,19 +492,13 @@ img, video, canvas {
     display: block;
 }
 
-/* ✅ Prevent scaling from breaking layout */
-.services-container .services-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.01); /* safer than 1.02 */
-}
-
-/* ✅ Safety net: prevent any flex/grid child from overflowing */
+/* ✅ Prevent layout breaking without clipping shadows */
 .home,
 .about,
 .services-container,
 .portfolio-container {
     flex-wrap: wrap;
-    overflow-x: hidden;
+    /* overflow-x: hidden; removed because it clips box-shadows and hover effects */
 }
 
 /* ✅ Limit grid width explicitly */
