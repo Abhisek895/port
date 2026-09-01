@@ -351,9 +351,19 @@ span {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding: 1rem 3rem;
     transform: translateY(100%);
     transition: 0.5s ease;
+    overflow-y: auto;
+}
+
+/* Hide scrollbar for the overlay so it looks clean */
+.portfolio-layer::-webkit-scrollbar {
+    display: none;
+}
+.portfolio-layer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -361,12 +371,15 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
 
 .portfolio-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
+    font-size: 1.4rem;
+    margin: 1rem 0 2rem;
+    line-height: 1.6;
 }
 
 /* Removed old circle styles so the normal .btn class can apply cleanly */
