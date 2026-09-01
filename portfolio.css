@@ -344,7 +344,6 @@ span {
 
 .portfolio h2 {
     margin-bottom: 4rem;
-    margin-top: 10rem;
 }
 
 .portfolio-container {
@@ -354,65 +353,59 @@ span {
 }
 
 .portfolio-container .portfolio-box {
-    position: relative;
+    background: var(--bg-color);
     border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
     display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-container .portfolio-box:hover {
+    border-color: rgba(89, 178, 244, 0.5);
+    transform: translateY(-1.5rem);
+    box-shadow: 0 1.5rem 4rem rgba(89, 178, 244, 0.25);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 18rem;
+    overflow: hidden;
 }
 
 .portfolio-box img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: .5s ease;
-    opacity: 0.7;
 }
 
 .portfolio-box:hover img {
     transform: scale(1.1);
 }
 
-.portfolio-box .portfolio-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgb(0, 0, 0, 0.1), var(--main-color));
+.portfolio-content {
+    padding: 2rem 2rem 2.5rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 1rem 3rem;
-    transform: translateY(100%);
-    transition: 0.5s ease;
-    overflow-y: auto;
+    flex-grow: 1;
 }
 
-/* Hide scrollbar for the overlay so it looks clean */
-.portfolio-layer::-webkit-scrollbar {
-    display: none;
-}
-
-.portfolio-layer {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.portfolio-box:hover .portfolio-layer {
-    transform: translateY(0);
-}
-
-.portfolio-layer h4 {
+.portfolio-content h4 {
     font-size: 2.2rem;
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
 
-.portfolio-layer p {
+.portfolio-content p {
     font-size: 1.4rem;
-    margin: 1rem 0 2rem;
+    margin: 1rem 0 1.5rem;
     line-height: 1.6;
+    color: #cbd5e1;
 }
 
 /* Removed old circle styles so the normal .btn class can apply cleanly */
