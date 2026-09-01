@@ -10,6 +10,21 @@
     font-family: 'Nunito', sans-serif;
 }
 
+/* Custom Scrollbar for 10/10 aesthetics */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #409ad9; /* slightly darker blue on hover */
+}
+
 :root {
     --bg-color: #191f36;
     --snd-bg-color: #262B40;
@@ -225,41 +240,68 @@ span {
 }
 
 .services-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    padding: 0 1rem;
+    margin-top: 4rem;
 }
 
 .services-container .services-box {
-    flex: 1 1 30rem;
     background: var(--snd-bg-color);
-    padding: 3rem 2rem 4rem;
+    padding: 4rem 3rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
-    margin-top: 5rem;
+    border: .2rem solid transparent;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.2);
+    transition: all .4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .services-container .services-box:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 3rem rgba(89, 178, 244, 0.2);
 }
 
 .services-box i {
-    font-size: 7rem;
+    font-size: 5rem;
     color: var(--main-color);
+    margin-bottom: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 9rem;
+    background: rgba(89, 178, 244, 0.1);
+    border-radius: 50%;
+    transition: .5s ease;
+    align-self: center;
+}
+
+.services-container .services-box:hover i {
+    background: var(--main-color);
+    color: var(--snd-bg-color);
 }
 
 .services-box h3 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .services-box p {
     font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+    margin: 1rem 0 2.5rem;
+    line-height: 1.6;
+}
+
+.services-box .btn {
+    align-self: center;
+    margin-top: auto;
 }
 
 /* Portfolio Section */
@@ -505,10 +547,8 @@ body::after {
 section,
 .header,
 .footer,
-.portfolio-container,
 .about,
-.home,
-.services-container {
+.home {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -527,17 +567,18 @@ section,
 
 /* 📷 Make the image bigger and cleaner */
 .about-img img {
-    width: 260px; /* or use max-width: 30vw for responsiveness */
+    width: 440px; /* Increased from 400px */
     height: auto;
-    border-radius: 10px;
-    border: 5px solid var(--main-color);
+    border-radius: 12px;
+    border: 6px solid var(--main-color);
     object-fit: cover;
-    box-shadow: 0 0 10px rgba(89, 178, 244, 0.4);
+    box-shadow: 0 0 20px rgba(89, 178, 244, 0.6);
+    margin-left: 3rem; /* Nudge a bit to the right */
 }
 
 /* 🧑‍💻 About Content Section */
 .about-content {
-    flex: 1 1 45rem;
+    flex: 1 1 55rem;
 }
 
 /* ✍️ Section Title */
@@ -556,9 +597,10 @@ section,
 
 /* 🧾 About Paragraph */
 .about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-    line-height: 1.6;
+    font-size: 1.8rem;
+    margin: 2rem auto 3.5rem;
+    line-height: 1.9;
+    max-width: 70rem;
 }
 
 /* 📄 CV Button */
