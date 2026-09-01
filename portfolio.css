@@ -47,6 +47,14 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+/* Explicit Alternating Background Colors */
+.home, .experience, .service, .Contact {
+    background: var(--bg-color);
+}
+.about, .education, .portfolio {
+    background: var(--snd-bg-color);
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -55,6 +63,7 @@ section {
     width: 100%;
     padding: 2rem 9%;
     background: var(--snd-bg-color);
+    transition: background 0.3s ease;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('header nav a');
     const sections = document.querySelectorAll('section');
+    const header = document.querySelector('.header');
 
     // Toggle Mobile Navbar
     if (menuIcon && navbar) {
@@ -42,6 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             link.classList.add('active');
                         }
                     });
+
+                    // Chameleon Navbar Logic: Flip header background color based on active section
+                    if (header) {
+                        const colorB_sections = ['about', 'education', 'portfolio'];
+                        if (colorB_sections.includes(id)) {
+                            header.style.background = 'var(--bg-color)';
+                        } else {
+                            header.style.background = 'var(--snd-bg-color)';
+                        }
+                    }
                 }
             });
         });
